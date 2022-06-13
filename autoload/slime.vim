@@ -12,7 +12,7 @@ end
 
 " screen and tmux need a file, so set a default if not configured
 if !exists("g:slime_paste_file")
-  let g:slime_paste_file = expand("$HOME/.slime_paste")
+  let g:slime_paste_file = expand("$HOME/.cache/vim-slime/paste")
 end
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
