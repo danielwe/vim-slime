@@ -94,7 +94,7 @@ Because Screen doesn't accept input from STDIN, a file is used to pipe data
 between Vim and Screen. By default this file is set to `$HOME/.slime_paste`.
 The name of the file used can be configured through a variable:
 
-    let g:slime_paste_file = "$HOME/.slime_paste"
+    let g:slime_paste_file = expand("$HOME/.slime_paste")
     " or maybe...
     let g:slime_paste_file = tempname()
 
@@ -122,7 +122,7 @@ make it work out without explicit config, the default was changed to use a file
 like Screen. By default this file is set to `$HOME/.slime_paste`. The name of
 the file used can be configured through a variable:
 
-    let g:slime_paste_file = "$HOME/.slime_paste"
+    let g:slime_paste_file = expand("$HOME/.slime_paste")
     " or maybe...
     let g:slime_paste_file = tempname()
 
