@@ -91,8 +91,10 @@ to be explicit, you can add this line to your .vimrc:
     let g:slime_target = "screen"
 
 Because Screen doesn't accept input from STDIN, a file is used to pipe data
-between Vim and Screen. By default this file is set to `$HOME/.cache/vim-slime/paste`.
-The name of the file used can be configured through a variable:
+between Vim and Screen. By default this file is set to
+`$XDG_CACHE_HOME/vim-slime/paste`, where `$XDG_CACHE_HOME` is replaced by
+`$HOME/.cache` if undefined. The name of the file used can be configured
+through a variable:
 
     let g:slime_paste_file = expand("$HOME/.cache/vim-slime/paste")
     " or maybe...
@@ -119,7 +121,8 @@ screen window name:
 
 Before tmux 2.2, tmux accepted input from STDIN. This doesn't work anymore. To
 make it work out without explicit config, the default was changed to use a file
-like Screen. By default this file is set to `$HOME/.cache/vim-slime/paste`. The name of
+like Screen. By default this file is set to `$XDG_CACHE_HOME/vim-slime/paste`,
+where `$XDG_CACHE_HOME` is replaced by `$HOME/.cache` if undefined. The name of
 the file used can be configured through a variable:
 
     let g:slime_paste_file = expand("$HOME/.cache/vim-slime/paste")
